@@ -6,12 +6,12 @@ public class ManagementSystem {
 
     private static Connection con;
     private static ManagementSystem instance;
-    private static String DatabaseURL = "jdbc:mysql://localhost:3306/mydb?useUnicode=true&use" +
+    private static String DatabaseURL = "jdbc:mysql://localhost:3306/users?useUnicode=true&use" +
             "JDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; //
 
     private ManagementSystem() throws Exception {
         try {
-            con = DriverManager.getConnection(DatabaseURL, "root", "root");
+            con = DriverManager.getConnection(DatabaseURL, "root", "12212298aa");
         } catch (SQLException e) {
             throw new Exception(e);
         }

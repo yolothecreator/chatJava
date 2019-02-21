@@ -1,6 +1,5 @@
 package ru.iamaswiftie.chat.client;
 
-
 import ru.iamaswiftie.network.ManagementSystem;
 
 import javax.swing.*;
