@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78d143f2-2fd3-4f00-8eaf-e7ee40e1c67c" name="Default Changelist" comment="Fix of login">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c.xml" afterDir="false" />
+    <list default="true" id="78d143f2-2fd3-4f00-8eaf-e7ee40e1c67c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/network/ru/iamaswiftie/network/ManagementSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/network/ru/iamaswiftie/network/ManagementSystem.class" afterDir="false" />
     </list>
     <list id="22239498-59ec-4264-88b9-28865a83a7d4" name="connecting from intelliji" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1462">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="758">
+              <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#703#704#0" expanded="true" />
@@ -93,25 +93,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="1496">
+              <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2032#2033#0" expanded="true" />
-                <element signature="e#2134#2135#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#2131#2132#0" expanded="true" />
+                <element signature="e#2233#2234#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+            <state relative-caret-position="197">
+              <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -134,6 +136,11 @@
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="branch_of_me" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -141,9 +148,9 @@
         <option value="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnectionListener.java" />
         <option value="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnection.java" />
         <option value="$PROJECT_DIR$/server/src/ru/iamaswiftie/chat/server/ChatServer.java" />
-        <option value="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" />
         <option value="$PROJECT_DIR$/server/src/ru/iamaswiftie/chat/server/ManagementSystem.java" />
         <option value="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" />
+        <option value="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" />
         <option value="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java" />
       </list>
     </option>
@@ -170,7 +177,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550759500497" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550762294261" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/network/lib/mysql-connector-java-8.0.13.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -199,7 +206,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.AuthorizationWindow">
-    <configuration name="AuthorizationWindow" type="Application" factoryName="Application" singleton="true" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationWindow" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.iamaswiftie.chat.client.AuthorizationWindow" />
       <module name="client" />
       <extension name="coverage">
@@ -311,11 +318,25 @@
       <option name="project" value="LOCAL" />
       <updated>1550751208342</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="the preparations for my independent working">
+      <created>1550760184034</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550760184034</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added the registration">
+      <created>1550761999903</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550761999903</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25737000" />
+    <option name="totallyTimeSpent" value="27978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -406,7 +427,9 @@
     <MESSAGE value="starting with the work today" />
     <MESSAGE value="попытка прикрутить авторизацию" />
     <MESSAGE value="added log in" />
-    <option name="LAST_COMMIT_MESSAGE" value="added log in" />
+    <MESSAGE value="the preparations for my independent working" />
+    <MESSAGE value="added the registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the registration" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c/console.sql" />
@@ -434,18 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2032#2033#0" expanded="true" />
-            <element signature="e#2134#2135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/ru/iamaswiftie/chat/server/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -458,8 +469,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="758">
+          <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#703#704#0" expanded="true" />
@@ -470,8 +481,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+        <state relative-caret-position="197">
+          <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#2131#2132#0" expanded="true" />
+            <element signature="e#2233#2234#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

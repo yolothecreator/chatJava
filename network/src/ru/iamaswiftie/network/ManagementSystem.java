@@ -24,6 +24,9 @@ public class ManagementSystem {
         return instance;
     }
 
+    /*
+    Авторизация
+     */
     public synchronized boolean authorization(String user, String password) throws SQLException {
         Statement stmt = null;
         ResultSet rs = null;
@@ -47,6 +50,10 @@ public class ManagementSystem {
         return true;
     }
 
+    /*
+    Функция для проверки существования пользователя, чтоб не регали кучу одинаковых
+    людей с одним и тем же ником
+     */
     public synchronized boolean doesThisUserExist(String user, String password) throws SQLException {
         Statement stmt = null;
         ResultSet rs = null;
@@ -70,6 +77,9 @@ public class ManagementSystem {
         return true;
     }
 
+    /*
+    Регистрация
+     */
     public synchronized boolean registration(String user, String password) throws SQLException {
         Statement stmt = con.createStatement();
         String query = "INSERT INTO users.users (user, password) \n" +

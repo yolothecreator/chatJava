@@ -1,6 +1,5 @@
 package ru.iamaswiftie.chat.client;
 
-
 import ru.iamaswiftie.network.ManagementSystem;
 
 import javax.swing.*;
@@ -22,39 +21,39 @@ public class AuthorizationWindow extends JFrame {
         });
     }
 
-    private final JTextArea user_input = new JTextArea();
-    private final JPasswordField password_input = new JPasswordField();
-    private JButton reg_button = new JButton("Registration");
-    private JButton login_button = new JButton("Login");
+    private final JTextArea userInput = new JTextArea();
+    private final JPasswordField passwordInput = new JPasswordField();
+    private JButton regButton = new JButton("Registration");
+    private JButton loginButton = new JButton("Login");
 
     private AuthorizationWindow() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
-        user_input.setToolTipText("username");
-        password_input.setToolTipText("password");
+        userInput.setToolTipText("username");
+        passwordInput.setToolTipText("password");
 
         Container container = this.getContentPane();
         container.setLayout(new GridLayout(4, 1, 20, 20));
-        container.add(user_input);
-        container.add(password_input);
+        container.add(userInput);
+        container.add(passwordInput);
 
 
-        container.add(reg_button);
-        container.add(login_button);
+        container.add(regButton);
+        container.add(loginButton);
 
-        login_button.addActionListener(new ActionListener() {
+        loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    if(user_input.getText().equals("") || new String(password_input.getPassword()).equals("")){
+                    if(userInput.getText().equals("") || new String(passwordInput.getPassword()).equals("")){
                         JOptionPane.showMessageDialog(AuthorizationWindow.this, "Fill username and password!");
-                    } else if(ManagementSystem.getInstance().authorization(user_input.getText(), new String(password_input.getPassword()))) {
+                    } else if(ManagementSystem.getInstance().authorization(userInput.getText(), new String(passwordInput.getPassword()))) {
                         dispose();  //add this to close authorisation window but not to set it invisible
                         SwingUtilities.invokeLater(new Runnable() {
                             @Override
                             public void run() {
-                                new ClientWindow(user_input.getText());
+                                new ClientWindow(userInput.getText());
                             }
                         });
                     } else {
@@ -63,33 +62,29 @@ public class AuthorizationWindow extends JFrame {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-
             }
         });
 
-        reg_button.addActionListener(new ActionListener() {
+        regButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    if(user_input.getText().equals("") || new String(password_input.getPassword()).equals("")){
+                    if(userInput.getText().equals("") || new String(passwordInput.getPassword()).equals("")){
                         JOptionPane.showMessageDialog(AuthorizationWindow.this, "Fill username and password!");
-                    } else if(ManagementSystem.getInstance().doesThisUserExist(user_input.getText(), new String(password_input.getPassword()))) {
+                    } else if(ManagementSystem.getInstance().doesThisUserExist(userInput.getText(), new String(passwordInput.getPassword()))) {
                         JOptionPane.showMessageDialog(AuthorizationWindow.this, "This user already exists!");
                     } else  {
-                        ManagementSystem.getInstance().registration(user_input.getText(), new String(password_input.getPassword()));
-                        user_input.setText("");
-                        password_input.setText("");
+                        ManagementSystem.getInstance().registration(userInput.getText(), new String(passwordInput.getPassword()));
+                        userInput.setText("");
+                        passwordInput.setText("");
                         JOptionPane.showMessageDialog(AuthorizationWindow.this, "Registration is successfull!");
-
                     }
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-
             }
         });
 
         setVisible(true);
     }
-
 }
