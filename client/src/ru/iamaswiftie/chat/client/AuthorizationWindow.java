@@ -42,20 +42,19 @@ public class AuthorizationWindow extends JFrame {
         login_button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*if (user_input.getText().equals("") || new String(password_input.getPassword()).equals("")) {
-                    JOptionPane.showMessageDialog(AuthorizationWindow.this,
-                            "Enter something!");
-                } else if (!user_input.getText().equals("glad_valakas") && !new String(password_input.getPassword()).equals("1234")) {
-                    JOptionPane.showMessageDialog(AuthorizationWindow.this,
-                            "The password/username is wrong");
-                } else {
-                    setVisible(false);
-                    new ClientWindow(user_input.getText());
-                }*/
                 try {
-                    if(ManagementSystem.getInstance().authorization(user_input.getText(), new String(password_input.getPassword()))) {
-                        setVisible(false);
-                        new ClientWindow(user_input.getText());
+                    if(user_input.getText().equals("") || new String(password_input.getPassword()).equals("")){
+                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Fill username and password!");
+                    } else if(ManagementSystem.getInstance().authorization(user_input.getText(), new String(password_input.getPassword()))) {
+                        dispose();  //add this to close authorisation window but not to set it invisible
+                        SwingUtilities.invokeLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                new ClientWindow(user_input.getText());
+                            }
+                        });
+                    } else {
+                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Wrong username or password!");
                     }
                 } catch (Exception e1) {
                     e1.printStackTrace();
