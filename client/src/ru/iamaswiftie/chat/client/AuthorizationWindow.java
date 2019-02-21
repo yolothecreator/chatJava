@@ -22,39 +22,39 @@ public class AuthorizationWindow extends JFrame {
         });
     }
 
-    private final JTextArea user_input = new JTextArea();
-    private final JPasswordField password_input = new JPasswordField();
+    private final JTextArea userInput = new JTextArea();
+    private final JPasswordField passwordInput = new JPasswordField();
     private final JLabel labelForInformation = new JLabel("", SwingConstants.CENTER);
-    private JButton login_button = new JButton("Login");
+    private JButton loginButton = new JButton("Login");
 
     private AuthorizationWindow() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
-        user_input.setToolTipText("username");
-        password_input.setToolTipText("password");
+        userInput.setToolTipText("username");
+        passwordInput.setToolTipText("password");
         labelForInformation.setForeground(Color.RED);
 
         Container container = this.getContentPane();
         container.setLayout(new GridLayout(4, 1, 20, 20));
-        container.add(user_input);
-        container.add(password_input);
-        container.add(login_button);
+        container.add(userInput);
+        container.add(passwordInput);
+        container.add(loginButton);
         container.add(labelForInformation);
 
-        login_button.addActionListener(new ActionListener() {
+        loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 labelForInformation.setText("");
                 try {
-                    if(user_input.getText().equals("") || new String(password_input.getPassword()).equals("")){
+                    if(userInput.getText().equals("") || new String(passwordInput.getPassword()).equals("")){
                         labelForInformation.setText("Fill username and password!");
-                    } else if(ManagementSystem.getInstance().authorization(user_input.getText(), new String(password_input.getPassword()))) {
+                    } else if(ManagementSystem.getInstance().authorization(userInput.getText(), new String(passwordInput.getPassword()))) {
                         dispose();  //add this to close authorisation window but not to set it invisible
                         SwingUtilities.invokeLater(new Runnable() {
                             @Override
                             public void run() {
-                                new ClientWindow(user_input.getText());
+                                new ClientWindow(userInput.getText());
                             }
                         });
                     } else {
