@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78d143f2-2fd3-4f00-8eaf-e7ee40e1c67c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java" afterDir="false" />
     </list>
     <list id="22239498-59ec-4264-88b9-28865a83a7d4" name="connecting from intelliji" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -177,7 +174,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550762294261" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550762784558" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/network/lib/mysql-connector-java-8.0.13.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -332,11 +329,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550761999903</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="теперь код соответствует правилам хорошего тона)0)))0">
+      <created>1550762410250</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550762410250</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27978000" />
+    <option name="totallyTimeSpent" value="28388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -429,7 +433,8 @@
     <MESSAGE value="added log in" />
     <MESSAGE value="the preparations for my independent working" />
     <MESSAGE value="added the registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the registration" />
+    <MESSAGE value="теперь код соответствует правилам хорошего тона)0)))0" />
+    <option name="LAST_COMMIT_MESSAGE" value="теперь код соответствует правилам хорошего тона)0)))0" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c/console.sql" />
