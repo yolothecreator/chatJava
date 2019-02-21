@@ -25,6 +25,7 @@ public class AuthorizationWindow extends JFrame {
     private final JTextArea userInput = new JTextArea();
     private final JPasswordField passwordInput = new JPasswordField();
     private final JLabel labelForInformation = new JLabel("", SwingConstants.CENTER);
+    private JButton regButton = new JButton("Registration");
     private JButton loginButton = new JButton("Login");
 
     private AuthorizationWindow() {
@@ -33,12 +34,14 @@ public class AuthorizationWindow extends JFrame {
         setLocationRelativeTo(null);
         userInput.setToolTipText("username");
         passwordInput.setToolTipText("password");
+
         labelForInformation.setForeground(Color.RED);
 
         Container container = this.getContentPane();
-        container.setLayout(new GridLayout(4, 1, 20, 20));
+        container.setLayout(new GridLayout(5, 1, 20, 20));
         container.add(userInput);
         container.add(passwordInput);
+        container.add(regButton);
         container.add(loginButton);
         container.add(labelForInformation);
 
@@ -63,7 +66,26 @@ public class AuthorizationWindow extends JFrame {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
+            }
+        });
 
+        regButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    if(userInput.getText().equals("") || new String(passwordInput.getPassword()).equals("")){
+                        labelForInformation.setText("Fill username and password!");
+                    } else if(ManagementSystem.getInstance().doesThisUserExist(userInput.getText(), new String(passwordInput.getPassword()))) {
+                        labelForInformation.setText("This user already exists!");
+                    } else  {
+                        ManagementSystem.getInstance().registration(userInput.getText(), new String(passwordInput.getPassword()));
+                        userInput.setText("");
+                        passwordInput.setText("");
+                        labelForInformation.setText("Registration is successfull!");
+                    }
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
             }
         });
 
