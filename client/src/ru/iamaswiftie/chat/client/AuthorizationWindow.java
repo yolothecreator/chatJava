@@ -24,6 +24,7 @@ public class AuthorizationWindow extends JFrame {
 
     private final JTextArea user_input = new JTextArea();
     private final JPasswordField password_input = new JPasswordField();
+    private JButton reg_button = new JButton("Registration");
     private JButton login_button = new JButton("Login");
 
     private AuthorizationWindow() {
@@ -37,6 +38,9 @@ public class AuthorizationWindow extends JFrame {
         container.setLayout(new GridLayout(4, 1, 20, 20));
         container.add(user_input);
         container.add(password_input);
+
+
+        container.add(reg_button);
         container.add(login_button);
 
         login_button.addActionListener(new ActionListener() {
@@ -55,6 +59,28 @@ public class AuthorizationWindow extends JFrame {
                         });
                     } else {
                         JOptionPane.showMessageDialog(AuthorizationWindow.this, "Wrong username or password!");
+                    }
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+
+            }
+        });
+
+        reg_button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    if(user_input.getText().equals("") || new String(password_input.getPassword()).equals("")){
+                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Fill username and password!");
+                    } else if(ManagementSystem.getInstance().doesThisUserExist(user_input.getText(), new String(password_input.getPassword()))) {
+                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "This user already exists!");
+                    } else  {
+                        ManagementSystem.getInstance().registration(user_input.getText(), new String(password_input.getPassword()));
+                        user_input.setText("");
+                        password_input.setText("");
+                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Registration is successfull!");
+
                     }
                 } catch (Exception e1) {
                     e1.printStackTrace();
