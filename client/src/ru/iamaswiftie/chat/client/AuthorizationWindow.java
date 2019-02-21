@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AuthorizationWindow extends JFrame {
-
     private static final int WIDTH = 300;
     private static final int HEIGHT = 200;
 
@@ -28,6 +27,7 @@ public class AuthorizationWindow extends JFrame {
     private JButton loginButton = new JButton("Login");
 
     private AuthorizationWindow() {
+        super("Authorization");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
@@ -90,5 +90,4 @@ public class AuthorizationWindow extends JFrame {
 
         setVisible(true);
     }
-
 }
