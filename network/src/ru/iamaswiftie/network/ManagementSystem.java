@@ -25,7 +25,7 @@ public class ManagementSystem {
     }
 
     /*
-    Авторизация
+    Authorization
      */
     public synchronized boolean authorization(String user, String password) throws SQLException {
         Statement stmt = null;
@@ -51,8 +51,8 @@ public class ManagementSystem {
     }
 
     /*
-    Функция для проверки существования пользователя, чтоб не регали кучу одинаковых
-    людей с одним и тем же ником
+    Function for checking if user exists
+    Made to avoid the multiple registrations the same-named persons
      */
     public synchronized boolean doesThisUserExist(String user) throws SQLException {
         Statement stmt = null;
@@ -78,7 +78,7 @@ public class ManagementSystem {
     }
 
     /*
-    Регистрация
+    Registration
      */
     public synchronized boolean registration(String user, String password) throws SQLException {
         String query = "INSERT INTO users (user, password) \n" +
