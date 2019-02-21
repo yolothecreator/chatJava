@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="users@localhost">
+<dataSource name="mydb@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.14">
     <root id="1">
       <ServerVersion>8.0.13</ServerVersion>
@@ -1135,7 +1135,7 @@
     </column>
     <column id="285" parent="282" name="password">
       <Position>3</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

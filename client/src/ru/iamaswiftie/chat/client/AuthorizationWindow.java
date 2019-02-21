@@ -1,5 +1,6 @@
 package ru.iamaswiftie.chat.client;
 
+
 import ru.iamaswiftie.network.ManagementSystem;
 
 import javax.swing.*;
@@ -23,6 +24,7 @@ public class AuthorizationWindow extends JFrame {
 
     private final JTextArea userInput = new JTextArea();
     private final JPasswordField passwordInput = new JPasswordField();
+    private final JLabel labelForInformation = new JLabel("", SwingConstants.CENTER);
     private JButton regButton = new JButton("Registration");
     private JButton loginButton = new JButton("Login");
 
@@ -33,21 +35,23 @@ public class AuthorizationWindow extends JFrame {
         userInput.setToolTipText("username");
         passwordInput.setToolTipText("password");
 
+        labelForInformation.setForeground(Color.RED);
+
         Container container = this.getContentPane();
-        container.setLayout(new GridLayout(4, 1, 20, 20));
+        container.setLayout(new GridLayout(5, 1, 20, 20));
         container.add(userInput);
         container.add(passwordInput);
-
-
         container.add(regButton);
         container.add(loginButton);
+        container.add(labelForInformation);
 
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                labelForInformation.setText("");
                 try {
                     if(userInput.getText().equals("") || new String(passwordInput.getPassword()).equals("")){
-                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Fill username and password!");
+                        labelForInformation.setText("Fill username and password!");
                     } else if(ManagementSystem.getInstance().authorization(userInput.getText(), new String(passwordInput.getPassword()))) {
                         dispose();  //add this to close authorisation window but not to set it invisible
                         SwingUtilities.invokeLater(new Runnable() {
@@ -57,7 +61,7 @@ public class AuthorizationWindow extends JFrame {
                             }
                         });
                     } else {
-                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Wrong username or password!");
+                        labelForInformation.setText("Wrong username/password!");
                     }
                 } catch (Exception e1) {
                     e1.printStackTrace();
@@ -70,14 +74,14 @@ public class AuthorizationWindow extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     if(userInput.getText().equals("") || new String(passwordInput.getPassword()).equals("")){
-                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Fill username and password!");
-                    } else if(ManagementSystem.getInstance().doesThisUserExist(userInput.getText(), new String(passwordInput.getPassword()))) {
-                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "This user already exists!");
+                        labelForInformation.setText("Fill username and password!");
+                    } else if(ManagementSystem.getInstance().doesThisUserExist(userInput.getText())) {
+                        labelForInformation.setText("This user already exists!");
                     } else  {
                         ManagementSystem.getInstance().registration(userInput.getText(), new String(passwordInput.getPassword()));
                         userInput.setText("");
                         passwordInput.setText("");
-                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Registration is successfull!");
+                        labelForInformation.setText("Registration is successfull!");
                     }
                 } catch (Exception e1) {
                     e1.printStackTrace();
@@ -87,4 +91,5 @@ public class AuthorizationWindow extends JFrame {
 
         setVisible(true);
     }
+
 }

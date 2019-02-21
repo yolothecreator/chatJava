@@ -6,12 +6,12 @@ public class ManagementSystem {
 
     private static Connection con;
     private static ManagementSystem instance;
-    private static String DatabaseURL = "jdbc:mysql://localhost:3306/users?useUnicode=true&use" +
+    private static String DatabaseURL = "jdbc:mysql://localhost:3306/mydb?useUnicode=true&use" +
             "JDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; //
 
     private ManagementSystem() throws Exception {
         try {
-            con = DriverManager.getConnection(DatabaseURL, "root", "12212298aa");
+            con = DriverManager.getConnection(DatabaseURL, "root", "root");
         } catch (SQLException e) {
             throw new Exception(e);
         }
@@ -54,7 +54,7 @@ public class ManagementSystem {
     Функция для проверки существования пользователя, чтоб не регали кучу одинаковых
     людей с одним и тем же ником
      */
-    public synchronized boolean doesThisUserExist(String user, String password) throws SQLException {
+    public synchronized boolean doesThisUserExist(String user) throws SQLException {
         Statement stmt = null;
         ResultSet rs = null;
         try {
@@ -81,8 +81,7 @@ public class ManagementSystem {
     Регистрация
      */
     public synchronized boolean registration(String user, String password) throws SQLException {
-        Statement stmt = con.createStatement();
-        String query = "INSERT INTO users.users (user, password) \n" +
+        String query = "INSERT INTO users (user, password) \n" +
                 " VALUES (?, ?);";
 
         PreparedStatement preparedStatement = con.prepareStatement(query);
