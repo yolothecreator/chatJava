@@ -54,7 +54,7 @@ public class ManagementSystem {
     Функция для проверки существования пользователя, чтоб не регали кучу одинаковых
     людей с одним и тем же ником
      */
-    public synchronized boolean doesThisUserExist(String user, String password) throws SQLException {
+    public synchronized boolean doesThisUserExist(String user) throws SQLException {
         Statement stmt = null;
         ResultSet rs = null;
         try {
