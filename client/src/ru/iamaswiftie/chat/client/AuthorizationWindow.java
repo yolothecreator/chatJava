@@ -75,7 +75,7 @@ public class AuthorizationWindow extends JFrame {
                 try {
                     if(userInput.getText().equals("") || new String(passwordInput.getPassword()).equals("")){
                         labelForInformation.setText("Fill username and password!");
-                    } else if(ManagementSystem.getInstance().doesThisUserExist(userInput.getText(), new String(passwordInput.getPassword()))) {
+                    } else if(ManagementSystem.getInstance().doesThisUserExist(userInput.getText())) {
                         labelForInformation.setText("This user already exists!");
                     } else  {
                         ManagementSystem.getInstance().registration(userInput.getText(), new String(passwordInput.getPassword()));
