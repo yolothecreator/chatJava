@@ -24,6 +24,7 @@ public class AuthorizationWindow extends JFrame {
 
     private final JTextArea user_input = new JTextArea();
     private final JPasswordField password_input = new JPasswordField();
+    private final JLabel labelForInformation = new JLabel("", SwingConstants.CENTER);
     private JButton login_button = new JButton("Login");
 
     private AuthorizationWindow() {
@@ -32,19 +33,22 @@ public class AuthorizationWindow extends JFrame {
         setLocationRelativeTo(null);
         user_input.setToolTipText("username");
         password_input.setToolTipText("password");
+        labelForInformation.setForeground(Color.RED);
 
         Container container = this.getContentPane();
         container.setLayout(new GridLayout(4, 1, 20, 20));
         container.add(user_input);
         container.add(password_input);
         container.add(login_button);
+        container.add(labelForInformation);
 
         login_button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                labelForInformation.setText("");
                 try {
                     if(user_input.getText().equals("") || new String(password_input.getPassword()).equals("")){
-                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Fill username and password!");
+                        labelForInformation.setText("Fill username and password!");
                     } else if(ManagementSystem.getInstance().authorization(user_input.getText(), new String(password_input.getPassword()))) {
                         dispose();  //add this to close authorisation window but not to set it invisible
                         SwingUtilities.invokeLater(new Runnable() {
@@ -54,7 +58,7 @@ public class AuthorizationWindow extends JFrame {
                             }
                         });
                     } else {
-                        JOptionPane.showMessageDialog(AuthorizationWindow.this, "Wrong username or password!");
+                        labelForInformation.setText("Wrong username/password!");
                     }
                 } catch (Exception e1) {
                     e1.printStackTrace();
