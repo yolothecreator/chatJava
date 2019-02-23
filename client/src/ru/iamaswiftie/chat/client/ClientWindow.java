@@ -26,8 +26,11 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     }
 
     private final JTextArea log = new JTextArea();
+    private final JTextArea nowOnline = new JTextArea();
     private final JTextField fieldNickname = new JTextField("user");
     private final JTextField fieldInput = new JTextField();
+    private final JPanel littlePanel = new JPanel();
+    private final JPanel middlePanel = new JPanel();
 
     private TCPConnection connection;
 
@@ -40,17 +43,32 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         log.setEditable(false);
         log.setLineWrap(true);
 
+        nowOnline.setEditable(false);
+        nowOnline.setLineWrap(true);
+
+        //nowOnline.setText("just as banned!");
+
         fieldNickname.setText(username);
 
-        fieldInput.addActionListener(this);
-        add(log, BorderLayout.CENTER);
+        littlePanel.setLayout(new BorderLayout());
+        littlePanel.add(nowOnline, BorderLayout.CENTER);
+        littlePanel.add(new JSeparator(SwingConstants.VERTICAL), BorderLayout.EAST);
+
+        middlePanel.setLayout(new BorderLayout());
+        middlePanel.add(littlePanel, BorderLayout.WEST);
+        middlePanel.add(log, BorderLayout.CENTER);
+
+        add(middlePanel, BorderLayout.CENTER);
         add(fieldInput, BorderLayout.SOUTH);
         add(fieldNickname, BorderLayout.NORTH);
+
+        fieldInput.addActionListener(this);
 
         setVisible(true);
         try {
             connection = new TCPConnection(this, IP_ADDR, PORT);
             connection.sendString(username + " connected");
+            nowOnline.append(connection.toString());
         } catch (IOException e) {
             printMsg("Connection exception: " + e);
         }

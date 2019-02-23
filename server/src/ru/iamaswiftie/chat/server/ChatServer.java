@@ -30,6 +30,8 @@ public class ChatServer implements TCPConnectionListener {
         }
     }
 
+
+
     @Override
     public synchronized void onConnectionReady(TCPConnection tcpConnection) {
         connections.add(tcpConnection);
