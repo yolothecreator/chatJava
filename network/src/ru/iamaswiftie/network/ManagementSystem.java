@@ -4,14 +4,14 @@ import java.sql.*;
 
 public class ManagementSystem {
 
-    private static Connection con;
+    private static Connection connection;
     private static ManagementSystem instance;
     private static String DatabaseURL = "jdbc:mysql://localhost:3306/users?useUnicode=true&use" +
             "JDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; //
 
     private ManagementSystem() throws Exception {
         try {
-            con = DriverManager.getConnection(DatabaseURL, "root", "12212298aa");
+            connection = DriverManager.getConnection(DatabaseURL, "root", "12212298aa");
         } catch (SQLException e) {
             throw new Exception(e);
         }
@@ -28,23 +28,23 @@ public class ManagementSystem {
     Authorization
      */
     public synchronized boolean authorization(String user, String password) throws SQLException {
-        Statement stmt = null;
-        ResultSet rs = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
         try {
-            stmt = con.createStatement();
+            statement = connection.createStatement();
             String query = "SELECT * FROM users WHERE user = \"" + user + "\" and password = \"" + password + "\"";
 
-            rs = stmt.executeQuery(query);
-            if(!rs.next()) { //return false if in database no user with this username and password
-                rs.close();
+            resultSet = statement.executeQuery(query);
+            if(!resultSet.next()) { //return false if in database no user with this username and password
+                resultSet.close();
                 return false;
             }
         } finally {
-            if (rs != null) {
-                rs.close();
+            if (resultSet != null) {
+                resultSet.close();
             }
-            if (stmt != null) {
-                stmt.close();
+            if (statement != null) {
+                statement.close();
             }
         }
         return true;
@@ -55,23 +55,23 @@ public class ManagementSystem {
     Made to avoid the multiple registrations the same-named persons
      */
     public synchronized boolean doesThisUserExist(String user) throws SQLException {
-        Statement stmt = null;
-        ResultSet rs = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
         try {
-            stmt = con.createStatement();
+            statement = connection.createStatement();
             String query = "SELECT * FROM users WHERE user = \"" + user + "\"";
 
-            rs = stmt.executeQuery(query);
-            if(!rs.next()) { //return false if in database no user with this username and password
-                rs.close();
+            resultSet = statement.executeQuery(query);
+            if(!resultSet.next()) { //return false if in database no user with this username and password
+                resultSet.close();
                 return false;
             }
         } finally {
-            if (rs != null) {
-                rs.close();
+            if (resultSet != null) {
+                resultSet.close();
             }
-            if (stmt != null) {
-                stmt.close();
+            if (statement != null) {
+                statement.close();
             }
         }
         return true;
@@ -84,7 +84,7 @@ public class ManagementSystem {
         String query = "INSERT INTO users (user, password) \n" +
                 " VALUES (?, ?);";
 
-        PreparedStatement preparedStatement = con.prepareStatement(query);
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, user);
         preparedStatement.setString(2, password);
         preparedStatement.executeUpdate();

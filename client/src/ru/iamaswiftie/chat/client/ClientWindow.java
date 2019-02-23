@@ -68,7 +68,6 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         try {
             connection = new TCPConnection(this, IP_ADDR, PORT);
             connection.sendString(username + " connected");
-            nowOnline.append(connection.toString());
         } catch (IOException e) {
             printMsg("Connection exception: " + e);
         }
@@ -85,6 +84,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     @Override
     public void onConnectionReady(TCPConnection tcpConnection) {
         printMsg("Connection ready...");
+        //printOnline(fieldNickname.getText());
     }
 
     @Override
