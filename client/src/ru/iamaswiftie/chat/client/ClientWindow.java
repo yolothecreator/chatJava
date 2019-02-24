@@ -8,6 +8,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ClientWindow extends JFrame implements ActionListener, TCPConnectionListener {
 
@@ -15,6 +17,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     private static final int PORT = 8189;
     private static final int WIDTH = 600;
     private static final int HEIGHT = 400;
+    private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
 
 
     private final JTextArea log = new JTextArea();
@@ -69,8 +72,10 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     public void actionPerformed(ActionEvent e) {
         String msg = fieldInput.getText();
         if (msg.equals("")) return;
+        Date date = new Date();
+
         fieldInput.setText(null);
-        connection.sendString(fieldNickname.getText() + ": " + msg);
+        connection.sendString("(" + simpleDateFormat.format(date) + ") " + fieldNickname.getText() + ": " + msg);
     }
 
     @Override
