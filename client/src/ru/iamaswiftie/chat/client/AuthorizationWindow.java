@@ -29,6 +29,7 @@ public class AuthorizationWindow extends JFrame {
     private JButton loginButton = new JButton("Login");
 
     private AuthorizationWindow() {
+        super("Authorization");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
@@ -39,6 +40,7 @@ public class AuthorizationWindow extends JFrame {
 
         Container container = this.getContentPane();
         container.setLayout(new GridLayout(5, 1, 20, 20));
+
         container.add(userInput);
         container.add(passwordInput);
         container.add(regButton);

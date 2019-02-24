@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78d143f2-2fd3-4f00-8eaf-e7ee40e1c67c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ru/iamaswiftie/chat/client/AuthorizationWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ru/iamaswiftie/chat/client/AuthorizationWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ru/iamaswiftie/chat/client/AuthorizationWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ru/iamaswiftie/chat/client/AuthorizationWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ru/iamaswiftie/chat/client/ClientWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ru/iamaswiftie/chat/client/ClientWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ru/iamaswiftie/chat/client/ClientWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ru/iamaswiftie/chat/client/ClientWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/network/ru/iamaswiftie/network/ManagementSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/network/ru/iamaswiftie/network/ManagementSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnection.java" afterDir="false" />
     </list>
     <list id="22239498-59ec-4264-88b9-28865a83a7d4" name="connecting from intelliji" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="264">
+              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,10 +45,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/ru/iamaswiftie/chat/server/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="1147">
+              <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1245#1246#0" expanded="true" />
+                <element signature="e#1288#1289#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            <state relative-caret-position="396">
+              <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
+            <state relative-caret-position="-447">
+              <caret line="55" column="45" lean-forward="true" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#487#488#0" expanded="true" />
@@ -100,15 +94,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="82" column="80" lean-forward="true" selection-start-line="82" selection-start-column="80" selection-end-line="82" selection-end-column="80" />
+            <state relative-caret-position="1232">
+              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -121,6 +110,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Mana</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -141,12 +135,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnectionListener.java" />
-        <option value="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnection.java" />
         <option value="$PROJECT_DIR$/server/src/ru/iamaswiftie/chat/server/ChatServer.java" />
         <option value="$PROJECT_DIR$/server/src/ru/iamaswiftie/chat/server/ManagementSystem.java" />
-        <option value="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" />
-        <option value="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" />
         <option value="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java" />
+        <option value="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java" />
+        <option value="$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java" />
+        <option value="$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnection.java" />
       </list>
     </option>
   </component>
@@ -223,7 +217,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550762294261" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551001422831" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/network/lib/mysql-connector-java-8.0.13.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -321,6 +315,7 @@
       <workItem from="1550424218872" duration="11000" />
       <workItem from="1550740915570" duration="8540000" />
       <workItem from="1550755748510" duration="3454000" />
+      <workItem from="1550999776210" duration="1581000" />
     </task>
     <task id="LOCAL-00001" summary="connecting from intelliji">
       <created>1550418790880</created>
@@ -378,17 +373,37 @@
       <option name="project" value="LOCAL" />
       <updated>1550761999903</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge remote-tracking branch 'remotes/origin/indie_branch' into branch_of_me&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java&#10;#&#9;out/production/client/ru/iamaswiftie/chat/client/AuthorizationWindow$2.class&#10;#&#9;out/production/client/ru/iamaswiftie/chat/client/AuthorizationWindow.class&#10;#&#9;out/production/network/ru/iamaswiftie/network/ManagementSystem.class">
+      <created>1550765752704</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550765752704</updated>
+    </task>
+    <task id="LOCAL-00010" summary="1">
+      <created>1550766201740</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550766201740</updated>
+    </task>
+    <task id="LOCAL-00011" summary="1">
+      <created>1550766230385</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550766230385</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28442000" />
+    <option name="totallyTimeSpent" value="31375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20149253" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -397,7 +412,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32575756" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32575756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -475,19 +490,15 @@
     <MESSAGE value="added log in" />
     <MESSAGE value="the preparations for my independent working" />
     <MESSAGE value="added the registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the registration" />
+    <MESSAGE value="Merge remote-tracking branch 'remotes/origin/indie_branch' into branch_of_me&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java&#10;#&#9;out/production/client/ru/iamaswiftie/chat/client/AuthorizationWindow$2.class&#10;#&#9;out/production/client/ru/iamaswiftie/chat/client/AuthorizationWindow.class&#10;#&#9;out/production/network/ru/iamaswiftie/network/ManagementSystem.class" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c/console.sql" />
-    <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="das://4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c/schema/users/table/users" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnectionListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -496,17 +507,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4b87f4bc-2b8f-4ac0-adfe-7ba6068e348c/schema/users/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/ru/iamaswiftie/chat/server/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="1147">
+          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/TCPConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -515,8 +548,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/AuthorizationWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
+        <state relative-caret-position="-447">
+          <caret line="55" column="45" lean-forward="true" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#487#488#0" expanded="true" />
@@ -524,23 +557,6 @@
             <element signature="e#2320#2321#0" expanded="true" />
             <element signature="e#2421#2422#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/ru/iamaswiftie/chat/client/ClientWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/src/ru/iamaswiftie/network/ManagementSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="82" column="80" lean-forward="true" selection-start-line="82" selection-start-column="80" selection-end-line="82" selection-end-column="80" />
         </state>
       </provider>
     </entry>
