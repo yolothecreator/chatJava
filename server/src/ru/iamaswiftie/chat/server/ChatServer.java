@@ -15,7 +15,7 @@ public class ChatServer implements TCPConnectionListener {
 
     private final ArrayList<TCPConnection> connections = new ArrayList<>();
 
-    private ChatServer() {
+    public ChatServer() {
         System.out.println("Server running...");
         try(ServerSocket serverSocket = new ServerSocket(8189)) {
             while (true) {

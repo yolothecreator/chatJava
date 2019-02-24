@@ -16,43 +16,18 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     private static final int WIDTH = 600;
     private static final int HEIGHT = 400;
 
-//    public static void main(String[] args){
-//        SwingUtilities.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                new ClientWindow();
-//            }
-//        });
-//    }
 
     private final JTextArea log = new JTextArea();
+    private final JTextArea nowOnline = new JTextArea();
     private final JTextField fieldNickname = new JTextField("user");
     private final JTextField fieldInput = new JTextField();
+    private final JPanel littlePanel = new JPanel();
+    private final JPanel middlePanel = new JPanel();
 
     private TCPConnection connection;
 
-//    protected ClientWindow() {
-//        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-//        setSize(WIDTH, HEIGHT);
-//        setLocationRelativeTo(null);
-//
-//        log.setEditable(false);
-//        log.setLineWrap(true);
-//
-//        fieldInput.addActionListener(this);
-//        add(log, BorderLayout.CENTER);
-//        add(fieldInput, BorderLayout.SOUTH);
-//        add(fieldNickname, BorderLayout.NORTH);
-//
-//        setVisible(true);
-//        try {
-//            connection = new TCPConnection(this, IP_ADDR, PORT);
-//        } catch (IOException e) {
-//            printMsg("Connection exception: " + e);
-//        }
-//    }
-
     protected ClientWindow(String username) {
+        super("Chat");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
@@ -60,12 +35,26 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         log.setEditable(false);
         log.setLineWrap(true);
 
+        nowOnline.setEditable(false);
+        nowOnline.setLineWrap(true);
+
+        //nowOnline.setText("just as banned!");
+
         fieldNickname.setText(username);
 
-        fieldInput.addActionListener(this);
-        add(log, BorderLayout.CENTER);
+        littlePanel.setLayout(new BorderLayout());
+        littlePanel.add(nowOnline, BorderLayout.CENTER);
+        littlePanel.add(new JSeparator(SwingConstants.VERTICAL), BorderLayout.EAST);
+
+        middlePanel.setLayout(new BorderLayout());
+        middlePanel.add(littlePanel, BorderLayout.WEST);
+        middlePanel.add(log, BorderLayout.CENTER);
+
+        add(middlePanel, BorderLayout.CENTER);
         add(fieldInput, BorderLayout.SOUTH);
         add(fieldNickname, BorderLayout.NORTH);
+
+        fieldInput.addActionListener(this);
 
         setVisible(true);
         try {
