@@ -122,4 +122,5 @@ public class AuthorizationWindow extends JFrame {
 
         setVisible(true);
     }
+
 }
