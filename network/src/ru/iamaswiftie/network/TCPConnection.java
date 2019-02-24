@@ -25,11 +25,13 @@ public class TCPConnection {
             @Override
             public void run() {
                 try {
-                    eventListener.onConnectionReady(TCPConnection.this);
+                    //eventListener.onConnectionReady(TCPConnection.this);
                     while (!rxThread.isInterrupted()) {
                         eventListener.onReceiveString(TCPConnection.this, in.readLine());
                     }
+
                     String msg = in.readLine();
+
                 } catch (IOException e) {
                     eventListener.onException(TCPConnection.this, e);
                 } finally {

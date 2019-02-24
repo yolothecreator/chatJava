@@ -4,6 +4,7 @@ package ru.iamaswiftie.chat.client;
 import ru.iamaswiftie.network.ManagementSystem;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,28 +23,58 @@ public class AuthorizationWindow extends JFrame {
         });
     }
 
-    private final JTextArea userInput = new JTextArea();
+    private final JTextField userInput = new JTextField();    //We need change it to JTextField
     private final JPasswordField passwordInput = new JPasswordField();
-    private final JLabel labelForInformation = new JLabel("", SwingConstants.CENTER);
+    private final JLabel labelForInformation = new JLabel(" ", SwingConstants.CENTER);
     private JButton regButton = new JButton("Registration");
-    private JButton loginButton = new JButton("Login");
+    private JButton loginButton = new JButton("Sign in");
 
     private AuthorizationWindow() {
+        super("Authorization");
+
+
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
-        userInput.setToolTipText("username");
-        passwordInput.setToolTipText("password");
-
+        setResizable(false);
         labelForInformation.setForeground(Color.RED);
 
-        Container container = this.getContentPane();
-        container.setLayout(new GridLayout(5, 1, 20, 20));
-        container.add(userInput);
-        container.add(passwordInput);
-        container.add(regButton);
-        container.add(loginButton);
-        container.add(labelForInformation);
+        Box loginBox = Box.createHorizontalBox();
+        JLabel loginLabel = new JLabel("Login:");
+        loginBox.add(loginLabel);
+        loginBox.add(Box.createHorizontalStrut(6));
+        loginBox.add(userInput);
+
+        Box passwordBox = Box.createHorizontalBox();
+        JLabel passwordLabel = new JLabel("Password:");
+        passwordBox.add(passwordLabel);
+        passwordBox.add(Box.createHorizontalStrut(6));
+        passwordBox.add(passwordInput);
+
+        Box buttonsBox = Box.createHorizontalBox();
+        buttonsBox.add(loginButton);
+        buttonsBox.add(Box.createHorizontalStrut(12));
+        buttonsBox.add(regButton);
+
+        Box logsBox = Box.createHorizontalBox();
+        logsBox.add(labelForInformation);
+
+        Box mainBox = Box.createVerticalBox();
+        mainBox.setBorder(new EmptyBorder(12,12,12,12));
+
+        mainBox.add(loginBox);
+        mainBox.add(Box.createVerticalStrut(12));
+
+        mainBox.add(passwordBox);
+        mainBox.add(Box.createVerticalStrut(20));
+
+        mainBox.add(buttonsBox);
+        mainBox.add(Box.createVerticalStrut(12));
+
+        mainBox.add(logsBox);
+        mainBox.add(Box.createVerticalStrut(12));
+
+        setContentPane(mainBox);
 
         loginButton.addActionListener(new ActionListener() {
             @Override
@@ -91,5 +122,4 @@ public class AuthorizationWindow extends JFrame {
 
         setVisible(true);
     }
-
 }
