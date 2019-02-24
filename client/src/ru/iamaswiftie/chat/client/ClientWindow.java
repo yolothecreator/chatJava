@@ -32,13 +32,12 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         setSize(WIDTH, HEIGHT);
         setLocationRelativeTo(null);
 
+
         log.setEditable(false);
         log.setLineWrap(true);
 
         nowOnline.setEditable(false);
         nowOnline.setLineWrap(true);
-
-        //nowOnline.setText("just as banned!");
 
         fieldNickname.setText(username);
 
@@ -57,6 +56,7 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
         fieldInput.addActionListener(this);
 
         setVisible(true);
+
         try {
             connection = new TCPConnection(this, IP_ADDR, PORT);
             connection.sendString(username + " connected");
